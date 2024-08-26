@@ -1,0 +1,3 @@
+ls = "Hello World".split("o")
+
+print("_".join(ls))
