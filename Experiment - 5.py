@@ -3,6 +3,10 @@
 A list is a sequenece of items or elements, the elements can be of any data type.
 """
 
+def printListSpecial(myl):
+    for i in myl: print(i, end=" ")
+    print()
+
 # Creating a empty list
 myList = list()
 
@@ -38,6 +42,49 @@ print(f"Minimum - {min(myList)}, Maximum - {max(myList)}")
 # Sum of elements
 print(sum(myList))
 
+# Random SAhuffling
+import random
+newList = [1,2,3,4,5,6,7,8,9]
+random.shuffle(newList)
+print(newList)
 
+
+# Append - element at end
+myList.append(400)
+print(myList)
+
+
+#Insert - element at index
+myList.insert(2, 666)
+print(myList)
+
+#EXtends - Iterable at the end
+myList.extend(newList)
+print(myList)
+
+# Remove - Remove The given elemnt
+myList.remove(666)
+print(myList)
+
+#Pop - removes the toppest/last element
+print(myList.pop())
+print(myList)
+
+
+# Reverse
+myList.reverse()
+print(myList)
+
+# sort
+myList.sort()
+print(myList)
+
+# copy
+xyzList = myList.copy()
+printListSpecial(xyzList)
+
+#clear
+xyzList.clear()
+print(xyzList)
 #print("__".join(myOtherList))
 
