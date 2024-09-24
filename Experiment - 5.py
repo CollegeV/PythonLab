@@ -86,5 +86,46 @@ printListSpecial(xyzList)
 #clear
 xyzList.clear()
 print(xyzList)
-#print("__".join(myOtherList))
 
+# WAP to check whether list is a plaindrome or not
+
+def isPalindrome(l1: list):
+    return l1 == l1[::-1]
+
+l1 = [14, 3, 5, 1, 2, 4, 6, 5, 43, 78, 33, 11, 15, 77, 45, 23]
+l2 = [1,2,3,2,1]
+print(l1, "IsPalindrome:", isPalindrome(l1))
+print(l2, "IsPalindrome:", isPalindrome(l2))
+
+# WAP to return prime numbers from list
+
+def primeList(l1: list):
+    onlyPrime = l1.copy()
+    for i in l1:
+        if not isPrime(i):
+            onlyPrime.remove(i)
+    return onlyPrime
+
+
+def isPrime(n):
+    if n <= 1:
+        return False
+    else:
+        for i in range(2, n):
+            if n % i == 0:
+                return False
+        return True
+    
+
+# WAP to assign grades based on marks in a list
+
+def getGrades(l: list) -> list:
+    for i in range(len(l)+1):
+        if l[i] >= 90: l[i] = 'A'
+        elif l[i] >= 80: l[i] = 'B'
+        elif l[i] > 65: l[i] = 'C'
+        elif l[i] > 40: l[i] = 'D'
+        else: l[i] = 'F'
+
+
+print(getGrades([78, 90, 34, 56, 39]))
