@@ -54,14 +54,3 @@ def call_val(a, b):
 
 results = call_val(5, 3)
 print(results)
-
-
-
-
-
-
-
-
-
-
-
